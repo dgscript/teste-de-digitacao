@@ -88,7 +88,7 @@ function startTimer() {
     }
 
     timer.innerHTML = timerValue;
-  }, 100);
+  }, 1000);
 }
 
 container.addEventListener("keydown", (e) => {
