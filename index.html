@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste de Digitação</title>
+    <style>
+      html {
+        font-size: 20px;
+      }
+
+      #main-container {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      #container {
+        /* outline: 1px solid red; */
+        display: inline;
+        user-select: none;
+        color: gray;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      #timer-container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      #pontuacoes {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main-container">
+      <p id="texto-principal">
+        Clique na caixa de textos e comece a digitar para começar o teste!
+      </p>
+      <div id="container" tabindex="0"></div>
+      <div id="timer-container">
+        <button onclick="reiniciar()" disabled="true" id="reiniciarButton">
+          Reiniciar
+        </button>
+        <p id="timer">0:00</p>
+        <p id="wpm">WPM: 0</p>
+      </div>
+
+      <div id="pontuacoes">
+        <p>Suas pontuações</p>
+        <div id="personal-best-container">
+          <p>67 WPM</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
